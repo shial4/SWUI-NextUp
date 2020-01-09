@@ -33,6 +33,7 @@ struct Vendor: Identifiable {
 }
 
 struct VendorView: View {
+    @EnvironmentObject var access: AccessToken
     @State var vendors: [Vendor]
     
     var addNewCard: SUICard<Text> {

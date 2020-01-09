@@ -10,6 +10,7 @@ import Foundation
 import SwiftWebUI
 
 struct LoginView: View {
+    @EnvironmentObject var access: AccessToken
     @State var email: String = ""
     @State var password: String = ""
     @State var alert: (header: String, message: String)? = nil

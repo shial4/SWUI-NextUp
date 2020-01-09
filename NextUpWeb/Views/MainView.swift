@@ -9,29 +9,8 @@
 import Foundation
 import SwiftWebUI
 
-#if false // duplicate ObservableObject
-  #if canImport(Combine)
-    import Combine
-  #elseif canImport(OpenCombine)
-    import OpenCombine
-  #endif
-#else
-  #if canImport(Combine)
-    import class Combine.PassthroughSubject
-  #elseif canImport(OpenCombine)
-    import class OpenCombine.PassthroughSubject
-  #endif
-#endif
-import SwiftWebUI
-
-class AccessToken: ObservableObject {
-  static let global = AccessToken()
-  var didChange = PassthroughSubject<Void, Never>()
-  var token: String? = nil { didSet { didChange.send(()) } }
-}
-
 struct MainView: View {
-    @ObservedObject var access = AccessToken.global
+    @ObservedObject var access = AccessToken()
     
     var body: some View {
         if let _ = access.token {
@@ -40,9 +19,10 @@ struct MainView: View {
                     Vendor(id: 1, ownerID: ["1"], createdAt: Date(), updatedAt: Date(), title: "title 1", description: "some new text 1", image: nil),
                     Vendor(id: 2, ownerID: ["2"], createdAt: Date(), updatedAt: Date(), title: "title 2", description: "some new text 2", image: nil)
                     ])
+                .environmentObject(access)
             )
         }
-        return AnyView(LoginView())
+        return AnyView(LoginView().environmentObject(access))
     }
 }
 

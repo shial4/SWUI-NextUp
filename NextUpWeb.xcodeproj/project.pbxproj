@@ -19,6 +19,7 @@
 		62E988E023C6E968003702A7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E988DC23C6E968003702A7 /* Profile.swift */; };
 		62E988E223C7455A003702A7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E988E123C7455A003702A7 /* String.swift */; };
 		62E988E523C7549C003702A7 /* SUIMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E988E423C7549C003702A7 /* SUIMessage.swift */; };
+		62E988E823C7EFA5003702A7 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E988E723C7EFA5003702A7 /* AccessToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		62E988DC23C6E968003702A7 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		62E988E123C7455A003702A7 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		62E988E423C7549C003702A7 /* SUIMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUIMessage.swift; sourceTree = "<group>"; };
+		62E988E723C7EFA5003702A7 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		62E988CD23C57EA3003702A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				62E988E623C7EF93003702A7 /* Observable */,
 				62E988DB23C6E968003702A7 /* Product.swift */,
 				62E988DC23C6E968003702A7 /* Profile.swift */,
 				62E988DA23C6E968003702A7 /* Token.swift */,
@@ -140,6 +143,14 @@
 				62E988E423C7549C003702A7 /* SUIMessage.swift */,
 			);
 			path = SemanticUI;
+			sourceTree = "<group>";
+		};
+		62E988E623C7EF93003702A7 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				62E988E723C7EFA5003702A7 /* AccessToken.swift */,
+			);
+			path = Observable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				62E988C323C56EA2003702A7 /* main.swift in Sources */,
 				62E988E023C6E968003702A7 /* Profile.swift in Sources */,
 				62E988CF23C57EB8003702A7 /* MainView.swift in Sources */,
+				62E988E823C7EFA5003702A7 /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
