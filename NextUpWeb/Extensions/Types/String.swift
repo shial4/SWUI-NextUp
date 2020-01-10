@@ -13,7 +13,8 @@ extension String {
         return Data(self.utf8).base64EncodedString()
     }
     
-    func localized() -> String {
-        return NSLocalizedString(self, comment: self)
+    func isValidEmail() -> Bool {
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
+        return emailPred.evaluate(with: self)
     }
 }

@@ -9,6 +9,6 @@
 import Foundation
 import SwiftWebUI
 
-let urlBase = "your api"
+let urlBase = "http://68.183.233.155"
 
 SwiftWebUI.serve(MainView())

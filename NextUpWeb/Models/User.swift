@@ -32,7 +32,7 @@ struct User: Decodable {
     }
     
     static func signup(email: String, password: String) throws -> AnyPublisher<User, DataTaskError> {
-        let url = "\(urlBase)/users/login"
+        let url = "\(urlBase)/users/create"
         var request = try URLRequest(urlString: url)
         request.method(.POST)
         request.headers(["Content-Type":"application/json"])

@@ -12,15 +12,16 @@ import SwiftWebUI
 struct SCUIMessage: View {
     enum Style { case negative, success }
     
-    @State var style: Style = .negative
+    var style: Style = .negative
     var title: String
     var message: String
     var closeAction: (() -> Void)
     
-    init(title: String, message: String, onClose: @escaping () -> Void) {
+    init(title: String, message: String, type: Style = .negative, onClose: @escaping () -> Void) {
         self.title = title
         self.message = message
         closeAction = onClose
+        style = type
     }
     
     private func close() { closeAction() }
